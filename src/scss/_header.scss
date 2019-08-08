@@ -1,0 +1,158 @@
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&-logo {
+		margin-top: 4px;
+		margin-right: 97px;
+		margin-bottom: 28px;
+	}
+
+	&-wrapper {
+		margin-top: 44px;
+
+		&-titleBlock {
+			display: flex;
+			align-items: center;
+
+			.wrapper-title {
+				margin: 0;
+				margin-right: 20px;
+				color: #262626;
+				font-family: "Myriad Pro";
+				font-size: 35px;
+				font-weight: 400;
+				letter-spacing: 1px;
+			}
+
+			.wrapper-date {
+				padding: 9px 11px;
+				border: 1px solid #4090db;
+				border-radius: 4px;
+				color: #4090db;
+				background-color: #ffffff;
+				font-family: "Helvetica Neue";
+				font-size: 15px;
+				font-weight: 400;
+				cursor: pointer;
+			}
+				:active, :hover, :focus {
+					outline: 0;
+					outline-offset: 0;
+				}
+				
+		}
+
+		&-posts {
+			display: flex;
+			margin-top: 19px;
+
+			& .wrapper-post {
+				margin-right: 29px;
+				color: #3d4044;
+				font-family: "Proxima Nova - Semibold";
+				font-size: 17px;
+
+				& .bold {
+					font-family: "Proxima Nova";
+				}
+			}
+			
+			& .wrapper-post:last-child {
+				margin-right: 0;
+			}
+
+		}
+
+		&-dates {
+			display: flex;
+			align-items: center;
+			margin-top: 20px;
+			margin-bottom: 34px;
+
+			.header-wrapper-date {
+				color: #262626;
+				font-family: Tahoma;
+				font-size: 17px;
+				font-weight: 400;
+				margin-right: 14px;
+			}
+
+			.header-wrapper-datepicker {
+				padding: 10px;
+				border: 1px solid #cccccc;
+				border-radius: 4px;
+				background-color: #ffffff;
+				margin-right: 24px;
+				color: #333333;
+				font-family: "Helvetica Neue";
+				font-size: 14px;
+				font-weight: 400;
+			}
+
+				:active, :hover, :focus {
+					outline: 0;
+					outline-offset: 0;
+				}
+
+				:last-child {
+					margin-right: 0;
+				}
+		}
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.header {
+		flex-direction: column;
+
+		&-logo {
+			margin: 0;
+		}
+
+		&-wrapper {
+			margin-top: 20px;
+
+			&-titleBlock,
+			&-posts,
+			&-dates {
+				justify-content: center;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.header {
+		flex-direction: column;
+
+		&-logo {
+			margin: 0;
+		}
+
+		&-wrapper {
+			margin-top: 10px;
+			
+			&-dates {
+				margin: 0;
+			}
+
+			&-titleBlock,
+			&-posts,
+			&-dates {
+				text-align: center;
+				justify-content: center;
+				flex-direction: column;
+
+				.wrapper-title,
+				.wrapper-post,
+				.header-wrapper-datepicker,
+				.header-wrapper-date {
+					margin-right: 0;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}
